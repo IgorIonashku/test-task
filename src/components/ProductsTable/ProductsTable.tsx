@@ -56,7 +56,7 @@ return <>
             <Table
                 columns={columns}
                 dataSource={data?.map(item=>({...item,key: item.id}))}
-                scroll={{ x: 500, y: 500 }}
+                scroll={{ x: 500, y: 350 }}
                 loading={isLoading}
                 pagination={{ 
                     total: total,

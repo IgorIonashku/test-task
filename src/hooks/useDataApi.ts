@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { error } from "../components/Message/ErrorMessage";
 import { fetchData } from "../services/fetchData";
 
 export interface DataType {
@@ -37,7 +38,8 @@ export const useDataApi = (limmit: number) => {
             });
           setTotal(result.data.total)
           setData(result.data.products);
-        } catch (error) {
+        } catch (err) {
+          error('Something went wrong please reload page')
           setIsError(true);
         }
   
